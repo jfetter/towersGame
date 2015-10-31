@@ -14,17 +14,26 @@ function selectTopOfStack(event){
 			console.log("S D:", selectedDisc, "S D S:", discsDataSize);
 			var lilBroSize = $(this).find(">:nth-child(2)").data("size");
 			console.log("LBS:", lilBroSize);
- 			// if the class "highlight has not been applied to $(this) then highlight it otherwise dont"
- 			  if  (! $(".floater").hasClass("highlight") ){
+ 			// if the class "highlight has not been applied to any of the boxes yet then highlight it otherwise dont"
+ 			  if  (! $(".floater").hasClass("highlight")){
  			  		console.log("I am selecting a disc")
             selectedDisc.addClass("highlight")
+     // but if there already is a highlighted box, then remove the highlight;
 		  	} 
 		 // if the class "highlight" has been applied to any of the floating things (ie discs) item when you 
-		 // click a tower, but the class removed has not been applied
+		 // click a tower, remove the old highlight and put it on the new selection
+		  	else {
+		  		console.log("I'd deselecting the other disc and selecting this new one")
+		  		$(".highlight").removeClass("highlight");
+		  		selectedDisc.addClass("highlight")
+		  	}
+		  //but the class removed has not been applied
+		 // if the selected disc is already highlighted
 		 // execute the function to remove selectedDisc from the document (and store it wherever removed things go)
 		 // add the class removed so it now has both highlight and remove and should on third
 		 // click advance to else statement
-		  	else if  (! $(".floater").hasClass("highlight") ) {
+		  	if  ( $(selectedDisc).hasClass("highlight") ) {
+		  		console.log("I am removing the disc")
 			 var removedDisc =	$(selectedDisc).addClass("removed").detach();
 		   }	else  {
 		   	countOfMoves ++; 
