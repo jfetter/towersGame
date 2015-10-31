@@ -4,7 +4,7 @@ function init () {
 	var countOfMoves = 0; 
 
 	$(".tower").on("click", selectTopOfStack);
-  $("#tower3").on("click", checkForVictory);
+ // $("#tower3").on("click", checkForVictory);
 
 }
 
@@ -15,16 +15,17 @@ function selectTopOfStack(event){
 			var lilBroSize = $(this).find(">:nth-child(2)").data("size");
 			console.log("LBS:", lilBroSize);
  			// if the class "highlight has not been applied to $(this) then highlight it otherwise dont"
- 			  if  (! $(".floater").hasClass("highlight") )
-            selectedDisc.addClass("highlight"){
+ 			  if  (! $(".floater").hasClass("highlight") ){
+ 			  		console.log("I am selecting a disc")
+            selectedDisc.css("class", "highlight")
 		  	} 
 		 // if the class "highlight" has been applied to any of the floating things (ie discs) item when you 
 		 // click a tower, but the class removed has not been applied
 		 // execute the function to remove selectedDisc from the document (and store it wherever removed things go)
 		 // add the class removed so it now has both highlight and remove and should on third
 		 // click advance to else statement
-		  	else if  (! $(".floater").hasClass("highlight") )) {
-			 var removedDisc =	$(selectedDisc).detach().addClass("removed");
+		  	else if  (! $(".floater").hasClass("highlight") ) {
+			 var removedDisc =	$(selectedDisc).addClass("removed").detach();
 		   }	else  {
 		   	countOfMoves ++; 
 		// when selected thing has the class remove and also the class highlight then 
@@ -39,19 +40,16 @@ function selectTopOfStack(event){
  			if((! lilBroSize || discsDataSize < lilBroSize ))
  				$("this").append(removedDisc);
 		 }
-}
-
 };
+
 
 // by the way, if tower# was the tower that was just clicked
 // have a quick look to see if you've manage to get all three
 // discs in there... if all three are there then you won
-function checkForVictory(){
-// if ( tower3 has 3 child elements in it execute the declare victory function )
-// {
-// 	declareVictory;
+// function checkForVictory(){
+//  if ( tower3 has 3 child elements in it  )
+//  	declareVictory;
 // }
-//}
 
 
 function declareVictory (){
