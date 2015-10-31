@@ -17,11 +17,9 @@ function selectTopOfStack(event){
 			var lilBroSize = $(this).find(">:nth-child(2)").data("size");
 			console.log("LBS:", lilBroSize);
  			// if the class "highlight has been applied to any of the boxes switch the highlighting
- 			  if  ( $(".floater").hasClass("highlight")){
+ 			  if  ( $(selectedDisc).hasClass("highlight")){
  						console.log("I deselecting the other disc and selecting this new one")
  			  		$(".highlight").removeClass("highlight");
-		  			selectedDisc.addClass("highlight");
-		  			removeOrPlaceDisc;
 		  	} 
 		  	// otherwise just add the class highlight ... so there is only ever one highlighted disc
 		  	else {
