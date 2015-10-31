@@ -9,15 +9,15 @@ function init () {
 }
 
 function selectTopOfStack(event){
-			var selectedDisc = $(this).children()[0];
+			var selectedDisc = $($(this).children()[0]);
 			var discsDataSize= $(this).find(">:first-child").data("size");
-			console.log("S T:", selectedDisc, "S T S:", discsDataSize);
+			console.log("S D:", selectedDisc, "S D S:", discsDataSize);
 			var lilBroSize = $(this).find(">:nth-child(2)").data("size");
 			console.log("LBS:", lilBroSize);
  			// if the class "highlight has not been applied to $(this) then highlight it otherwise dont"
  			  if  (! $(".floater").hasClass("highlight") ){
  			  		console.log("I am selecting a disc")
-            selectedDisc.css("class", "highlight")
+            selectedDisc.addClass("highlight")
 		  	} 
 		 // if the class "highlight" has been applied to any of the floating things (ie discs) item when you 
 		 // click a tower, but the class removed has not been applied
