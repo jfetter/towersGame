@@ -1,64 +1,72 @@
-
-
-.invisible{
-	visibility: hidden;
+.wrapper{
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  background-color: pink;
+ 
 }
-
-.removed{
-	
-}
-
-#winner{
-	padding: 2vw;
-	padding-top: 3vw;
-	text-align: center;
-	height: 10vw;
-	font-weight: bold;
-	border-radius: 50%;
-	border: 1px solid black;
-	background-color: orange;
-}
-
 .tower{
-	text-align: center;
-	width: 20vw;
-	height: 40vw;
-	display: block;
-	float: left;
-	padding: 3%;
-	background-color: green;
-	border: 3px solid black;
- 	margin: 1%;
+  border: 1px solid #000;
+  margin: 10px; 
+  height: 500px;
+  width: 200px;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+}
+#tower1{
+  position: relative;
+  margin: 0 auto;
+  bottom: 0;
+}
+#tower3{
+    border: 1px solid #000;
+    margin: 10px;
+    min-height: 50px;
+    left: 39%;
+}
+  
+#tower2{
+    position: absolute;
+    left: 20%;
+}
+.contains{
+  position: absolute;
+  bottom: 0;
+}
+#floater3 {
+  height: 50px;
+  margin: 0 auto;
+  width: 150px;
+  background-color: green;
+}
+
+#floater2 {
+  height: 50px;
+  margin: 0 auto;
+  width: 90px;
+  background-color: red;
+}
+
+.floater1 {
+  height: 50px;
+  margin: 0 auto;
+  width: 50px;
+  background-color: blue;
 }
 
 .floating{
-	text-align: center;
-	display: block;
-	height: 5%;
-	width: 20%;
-	padding: 10px;
-	background-color: purple;
-	border: 3px solid black;
- 	margin: 10px;
-
+	height: 50px;
+  margin: 0 auto;
+  width: 50px;
+  border: 1px solid #000;
+  background-color: blue;
 }
-
-#floater2{
-	width: 30%;
-}
-
-#floater3{
-	width: 40%;
-}
-
-
 
 .highlight{
-	border: 7px solid yellow;
-	background-color: black;
+border: 3px solid yellow;
+}
 
-/*}
-
-
- 			  		console.log("I am selecting a disc")
-            selectedDisc.addClass("highlight")*/
+.invisible{
+	display: none;
+}

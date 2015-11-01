@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Toweres of Divs</title>
-	 <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Toweres of Divs</title>
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-	
+  <div class="invisible" id="winner">Welcome To The Winner's Circle</div>
 
 
-<div id="all">
-<div id="tower1" class="tower">
-	<div id="floater1"class="floating" data-size = "1">floater1</div>
-	<div id="floater2"class="floating" data-size="2">floater 2</div>
-	<div id="floater3"class="floating" data-size="3">floater3</div>
+<div class="wrapper">
+  
+  <div id="tower1" class="tower">
+    <div class="contains">
+    <div id="floater1"class="floating" data-size = "1" align="center">floater1</div>
+    <div id="floater2"class="floating" data-size="2" align="center">floater 2</div>
+    <div id="floater3"class="floating" data-size="3" align="center">floater3</div>
+    </div>
+  </div>
+  
+  <div id="tower2" class="tower"> 
+    <div class="contains">
+    <div class="floating"></div>
+    </div>
+  
+  </div>
+  <div class="contains"></div>
+  <div id="tower3" class="tower"></div>
+  </div>
 </div>
-
-<div id="tower2" class="tower"> 
-	<div class="invisible" id="winner">Welcome To The Winner's Circle</div>
-
-</div>
-<div id="tower3" class="tower"></div>
-</div>
-	
+  
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="script.js"></script>
 </body>
