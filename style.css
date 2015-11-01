@@ -67,6 +67,9 @@
 border: 3px solid yellow;
 }
 
+.removed{
+}
+
 .invisible{
 	display: none;
 }
